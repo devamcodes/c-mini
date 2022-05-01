@@ -1,0 +1,37 @@
+Task: Initialize an array using pointers and functions.
+
+Project statement:
+- make a global array which can contain marks of a student.
+- choose an appropriate data type for this array
+
+- make a function which will initialize the array values to 0
+- pass address of array to this function
+
+- print the output in this format:
+
+Array[0]: 0
+Array[1]: 0
+Array[2]: 0
+Array[3]: 0
+Array[4]: 0
+
+Assumptions: There are 5 subjects.
+=========================================================================================
+
+Hints:
+
+use the pointer while declaring function
+eg.
+
+void initializeArray(dataType_t *ptr)
+{
+	for(i;i<=4;i++)
+	{
+		*(ptr+i) = 0;
+	}
+}
+===================================================================
+Note: Understand the program before you implement your own version.
+===================================================================
+
+ALL THE BEST!!

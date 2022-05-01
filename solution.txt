@@ -1,0 +1,56 @@
+//  header files
+#include <stdio.h>
+
+//  constants
+#define ARRAYSIZE 4
+
+//  function prototypes
+
+void initializeFunction(char *arrayPointer);
+
+//  global variables
+char marksArray[ARRAYSIZE];     // 0 1 2 3 4
+/*
+    marksArray[0]
+    marksArray[1]
+    marksArray[2]
+    marksArray[3]
+    marksArray[4]
+*/
+
+// functions
+
+void initializeFunction(char *arrayPointer)
+{
+    char index = 0;
+    for(index ; index <= ARRAYSIZE ; index++)
+    {
+        *(arrayPointer+index) = 0;
+    }
+}
+
+void printArray(char *arrayPointer)
+{
+    for(index ; index <= ARRAYSIZE ; index++)
+    {
+        printf("marksArray[%d]:%d\n",index,*(arrayPointer+index));
+    }
+}
+
+
+// interrupt service routines
+
+
+
+//  main function
+int main()
+{
+    char *ptr;
+    ptr = &marksArray[ARRAYSIZE];
+    initializeFunction(&marksArray[0]);
+    printArray(&marksArray[0]);
+    
+    
+    return 0;
+    
+}
